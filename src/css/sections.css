@@ -117,7 +117,7 @@
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(28, 28, 28, 0.45);
+  background: rgba(28, 28, 28, 0.25);
 }
 
 .video-content {
