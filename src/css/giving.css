@@ -1,0 +1,129 @@
+/* ── GIVING SECTION ── */
+.giving-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.giving-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ── IMPACT LIST ── */
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.impact-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--ink-mid);
+}
+
+.impact-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.impact-list li strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ── CUSTOM AMOUNT ── */
+.custom-amount {
+  margin-top: var(--space-lg);
+}
+
+.custom-amount label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.custom-amount-row {
+  display: flex;
+  gap: 12px;
+}
+
+.custom-amount-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.custom-amount-symbol {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ink-mid);
+}
+
+.custom-amount-input {
+  width: 100%;
+  padding: 14px 14px 14px 28px;
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: var(--white);
+  transition: border-color var(--duration-micro),
+              box-shadow var(--duration-micro);
+}
+
+.custom-amount-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.custom-amount-input::placeholder {
+  color: var(--ink-light);
+}
+
+/* Remove number input spinners */
+.custom-amount-input::-webkit-outer-spin-button,
+.custom-amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-amount-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Donate button specific */
+.donate-btn {
+  white-space: nowrap;
+  padding: 14px 32px;
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+/* ── SHAKE ANIMATION ── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.5s var(--ease-out);
+  border-color: var(--red-mid) !important;
+}

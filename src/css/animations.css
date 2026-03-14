@@ -1,0 +1,87 @@
+/* ── HERO ENTRANCE (above-the-fold, not scroll-triggered) ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) both;
+}
+
+.hero-anim:nth-child(1) { animation-delay: 0.1s; }
+.hero-anim:nth-child(2) { animation-delay: 0.3s; }
+.hero-anim:nth-child(3) { animation-delay: 0.5s; }
+.hero-anim:nth-child(4) { animation-delay: 0.7s; }
+
+/* ── SCROLL REVEAL BASE ── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(120px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-in-viewport {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional variants */
+[data-reveal="left"] {
+  transform: translateX(-60px);
+}
+[data-reveal="left"].is-in-viewport {
+  transform: translateX(0);
+}
+
+[data-reveal="right"] {
+  transform: translateX(60px);
+}
+[data-reveal="right"].is-in-viewport {
+  transform: translateX(0);
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+[data-reveal="fade"].is-in-viewport {
+  opacity: 1;
+}
+
+/* ── STAGGER DELAYS ── */
+[data-delay="0"] { transition-delay: 0ms; }
+[data-delay="1"] { transition-delay: 150ms; }
+[data-delay="2"] { transition-delay: 300ms; }
+[data-delay="3"] { transition-delay: 450ms; }
+[data-delay="4"] { transition-delay: 600ms; }
+[data-delay="5"] { transition-delay: 750ms; }
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-anim {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,64 @@
+.container {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.container-narrow {
+  max-width: var(--max-narrow);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding: var(--section-pad) 0;
+}
+
+.section--white {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.section--surface {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.section--dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.section--dark h2,
+.section--dark h3 {
+  color: var(--dark-text);
+}
+
+.section--dark p,
+.section--dark .lead {
+  color: var(--dark-text-mid);
+}
+
+.section--dark .eyebrow {
+  color: var(--accent);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: var(--text-section);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--ink-mid);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
