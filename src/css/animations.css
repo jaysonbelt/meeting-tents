@@ -23,7 +23,7 @@
 /* ── SCROLL REVEAL BASE ── */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(120px);
+  transform: translateY(40px);
   transition:
     opacity var(--duration-reveal) var(--ease-out),
     transform var(--duration-reveal) var(--ease-out);

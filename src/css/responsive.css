@@ -96,38 +96,6 @@
     font-size: 14px;
   }
 
-  /* ── Stats ── */
-  .stats {
-    padding: 0;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat + .stat {
-    border-left: none;
-    border-top: 1px solid var(--border);
-  }
-
-  .stat {
-    padding: 20px var(--gutter);
-    text-align: left;
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-  }
-
-  .stat-num {
-    font-size: 28px;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
-
-  .stat-label {
-    font-size: 13px;
-  }
-
   /* ── Origin ── */
   #origin h2 {
     font-size: clamp(24px, 6vw, 32px);
@@ -190,12 +158,12 @@
     font-size: 12px;
   }
 
-  /* ── Crisis children ── */
-  #crisis-children .container-narrow > h2 {
+  /* ── Crisis ── */
+  #crisis .container-narrow > h2 {
     font-size: clamp(24px, 6vw, 32px);
   }
 
-  #crisis-children .container-narrow > .lead {
+  #crisis .container-narrow > .lead {
     font-size: 15px;
   }
 
@@ -239,55 +207,6 @@
 
   .pull-quote p {
     font-size: 15px;
-  }
-
-  /* ── Crisis women (dark) ── */
-  #crisis-women h2 {
-    font-size: clamp(24px, 6vw, 32px);
-  }
-
-  #crisis-women .lead {
-    font-size: 15px;
-  }
-
-  .compare-grid {
-    margin: 24px auto;
-  }
-
-  .compare-cards {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .compare-card {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 4px 12px;
-  }
-
-  .compare-country {
-    font-size: 12px;
-  }
-
-  .compare-pct {
-    font-size: 28px;
-  }
-
-  .compare-bar-wrap {
-    width: 100%;
-    margin-top: 4px;
-  }
-
-  #crisis-women h3 {
-    font-size: clamp(20px, 5vw, 26px);
-    margin-top: 32px;
-  }
-
-  #crisis-women .container-narrow > p {
-    font-size: 15px;
-    line-height: 1.7;
   }
 
   .barrier-list {
@@ -476,7 +395,7 @@
 
   /* ── Reduce animation travel on mobile ── */
   [data-reveal] {
-    transform: translateY(60px);
+    transform: translateY(24px);
   }
 
   [data-reveal="left"] {
@@ -492,10 +411,6 @@
 @media (max-width: 374px) {
   .hero h1 {
     font-size: 28px;
-  }
-
-  .stat-num {
-    font-size: 24px;
   }
 
   .data-grid {

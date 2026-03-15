@@ -23,7 +23,7 @@ export function initScrollReveal() {
     },
     {
       threshold: 0.01,
-      rootMargin: '0px 0px -20px 0px',
+      rootMargin: '0px 0px 80px 0px',
     }
   );
 
@@ -33,7 +33,7 @@ export function initScrollReveal() {
   const revealRemaining = () => {
     const nearBottom =
       window.scrollY + window.innerHeight >=
-      document.documentElement.scrollHeight - 100;
+      document.documentElement.scrollHeight - 300;
 
     if (nearBottom) {
       document.querySelectorAll('[data-reveal]:not(.is-in-viewport)').forEach((el) => {
@@ -44,4 +44,7 @@ export function initScrollReveal() {
   };
 
   window.addEventListener('scroll', revealRemaining, { passive: true });
+
+  // Fire fallback check once on load in case page is already scrolled or short
+  requestAnimationFrame(revealRemaining);
 }

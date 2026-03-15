@@ -16,15 +16,13 @@ export function initNav() {
 
   // --- Active section tracking ---
   const sectionMap = {
-    hero: 'cause',
-    stats: 'cause',
-    origin: 'cause',
-    video: 'cause',
-    pillars: 'cause',
-    'crisis-children': 'crisis',
-    'crisis-women': 'crisis',
-    founders: 'cause',
-    contribute: 'contribute',
+    hero: null,
+    origin: 'origin',
+    video: 'origin',
+    pillars: 'pillars',
+    crisis: 'crisis',
+    founders: 'founders',
+    contribute: null,
   };
 
   const sectionObserver = new IntersectionObserver(
@@ -37,7 +35,7 @@ export function initNav() {
           navLinks.forEach((link) => {
             link.classList.toggle(
               'active',
-              link.dataset.nav === navGroup
+              navGroup !== null && link.dataset.nav === navGroup
             );
           });
         }
