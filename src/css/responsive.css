@@ -249,19 +249,29 @@
     font-size: 14px;
   }
 
+  /* ── Photo elements ── */
+  .photo-break,
+  .photo-break-img {
+    height: 240px;
+    max-height: 240px;
+  }
+
+  .section-photo {
+    margin: 20px auto;
+  }
+
   /* ── Founders ── */
   .founders-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 16px;
+    gap: 20px;
     max-width: 100%;
   }
 
   .founders-avatar {
     margin: 0 auto;
-    width: 72px;
-    height: 72px;
-    font-size: 22px;
+    width: 160px;
+    height: 200px;
   }
 
   .founders-text h3 {
