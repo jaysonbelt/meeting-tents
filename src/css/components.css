@@ -299,17 +299,17 @@
 
 /* ── FOUNDERS ── */
 .founders-grid {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 32px;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
   align-items: start;
 }
 
 .founders-avatar {
-  width: 200px;
-  height: 260px;
+  width: 300px;
+  height: 390px;
   border-radius: var(--radius);
   object-fit: cover;
   object-position: center top;
