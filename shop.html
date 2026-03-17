@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop for a Cause — Meeting TENTS</title>
+  <meta name="description" content="Every purchase from the Meeting TENTS store directly supports disease prevention, health promotion, and access to care programs in Mexico, the Philippines, and Uganda.">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <script type="module" src="/src/js/main.js"></script>
+  <style>
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: var(--space-lg);
+    }
+    .shop-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      transition: transform var(--duration-fast) var(--ease-out),
+                  box-shadow var(--duration-fast) var(--ease-out);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .shop-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    .shop-card-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: var(--accent);
+    }
+    .shop-card-body {
+      padding: 20px;
+    }
+    .shop-card-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .shop-card-price {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .shop-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .shop-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav is-scrolled" id="nav">
+  <a href="/meeting-tents/" class="nav-logo">
+    <img src="/logo.png" alt="Meeting TENTS logo" class="nav-logo-icon">
+    <span class="nav-logo-text">Meeting TENTS</span>
+  </a>
+  <div class="nav-links" id="nav-links-desktop">
+    <a href="/meeting-tents/" class="nav-link">Home</a>
+    <a href="/meeting-tents/#pillars" class="nav-link">Impact</a>
+    <a href="/meeting-tents/#crisis" class="nav-link">Crisis</a>
+    <a href="/meeting-tents/#founders" class="nav-link">Team</a>
+    <a href="/meeting-tents/#contribute" class="nav-cta">Donate</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="/meeting-tents/" class="nav-mobile-link">Home</a>
+  <a href="/meeting-tents/#pillars" class="nav-mobile-link">Impact</a>
+  <a href="/meeting-tents/#crisis" class="nav-mobile-link">Crisis</a>
+  <a href="/meeting-tents/#founders" class="nav-mobile-link">Team</a>
+  <a href="/meeting-tents/#contribute" class="nav-mobile-link nav-mobile-cta">Donate</a>
+</div>
+
+<main>
+
+<section class="section section--white" style="padding-top: calc(64px + var(--section-pad));">
+  <div class="container-narrow">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Shop for a Cause</p>
+    <h1 style="font-size: var(--text-section); font-weight: 700; margin-bottom: var(--space-md);">Wear the mission.</h1>
+    <p class="lead">Every purchase from the Meeting TENTS store directly supports disease prevention, health promotion, and access to care programs in Mexico, the Philippines, and Uganda.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="shop-grid">
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Shop for a Cause: Give Hope</div>
+          <div class="shop-card-price">$40</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Short-Sleeve Unisex T-Shirt</div>
+          <div class="shop-card-price">$24</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Unisex Heavy Blend Zip Hoodie</div>
+          <div class="shop-card-price">$49</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Unisex T-Shirt</div>
+          <div class="shop-card-price">$24</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Unisex Hoodie</div>
+          <div class="shop-card-price">$49</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Trucker Cap</div>
+          <div class="shop-card-price">$26</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Youth T-Shirt</div>
+          <div class="shop-card-price">$15</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Youth Heavy Blend Hoodie</div>
+          <div class="shop-card-price">$29</div>
+        </div>
+      </a>
+
+      <a href="https://www.meetingtents.org/shop" class="shop-card" target="_blank" rel="noopener">
+        <div class="shop-card-img">&#9650;</div>
+        <div class="shop-card-body">
+          <div class="shop-card-name">Bubble-Free Stickers</div>
+          <div class="shop-card-price">$5</div>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-xl);">
+      <p style="color: var(--ink-mid); margin-bottom: var(--space-md);">All purchases are handled securely through our store.</p>
+      <a href="https://www.meetingtents.org/shop" target="_blank" rel="noopener" class="btn-primary">
+        <span>Visit the full store</span>
+        <span class="btn-arrow">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="section section--dark footer">
+  <div class="container">
+    <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border-top: none;">
+      <div class="footer-logo">
+        <img src="/logo.png" alt="Meeting TENTS logo" class="footer-logo-icon">
+        <span>Meeting TENTS</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Meeting TENTS. All rights reserved. 501(c)(3) nonprofit organization.</p>
+    </div>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
