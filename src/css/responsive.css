@@ -97,6 +97,10 @@
   }
 
   /* ── Origin ── */
+  #origin {
+    padding-top: 24px;
+  }
+
   #origin h2 {
     font-size: clamp(24px, 6vw, 32px);
   }
