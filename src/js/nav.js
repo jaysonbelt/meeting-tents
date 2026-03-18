@@ -78,4 +78,23 @@ export function initNav() {
       }
     });
   });
+
+  // Reveal hidden elements in target section after nav click
+  const revealTarget = (hash) => {
+    if (!hash) return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    // Small delay to let the scroll settle
+    setTimeout(() => {
+      target.querySelectorAll('[data-reveal]:not(.is-in-viewport)').forEach((el) => {
+        el.classList.add('is-in-viewport');
+      });
+    }, 100);
+  };
+
+  [...navLinks, ...mobileLinks].forEach((link) => {
+    link.addEventListener('click', () => {
+      revealTarget(link.getAttribute('href'));
+    });
+  });
 }
