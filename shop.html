@@ -3,172 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop for a Cause — Meeting TENTS</title>
-  <meta name="description" content="Every purchase from the Meeting TENTS store directly supports disease prevention, health promotion, and access to care programs in Mexico, the Philippines, and Uganda.">
+  <title>Shop — Coming Soon | Meeting TENTS</title>
+  <meta name="description" content="The Meeting TENTS shop is coming soon. Every purchase will directly support disease prevention, health promotion, and access to care programs worldwide.">
   <link rel="icon" type="image/png" href="/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
   <script type="module" src="/src/js/main.js"></script>
   <style>
-    /* ── Featured product ── */
-    .featured {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .featured-img {
-      width: 100%;
-      aspect-ratio: 1;
-      background: var(--surface);
-      border-radius: var(--radius);
+    .coming-soon {
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 64px;
-      color: var(--accent);
-      overflow: hidden;
+      text-align: center;
+      padding: calc(64px + var(--space-xl)) var(--space-md) var(--space-xl);
     }
-    .featured-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .coming-soon-icon {
+      font-size: 56px;
+      margin-bottom: var(--space-sm);
+      line-height: 1;
     }
-    .featured-body h3 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: var(--space-xs);
-    }
-    .featured-price {
+    .coming-soon h1 {
       font-family: var(--font-serif);
-      font-size: 24px;
+      font-size: clamp(36px, 5vw, 56px);
       font-weight: 700;
-      color: var(--accent);
       margin-bottom: var(--space-sm);
+      color: var(--ink);
     }
-    .featured-body p {
+    .coming-soon .lead {
+      max-width: 520px;
+      margin: 0 auto var(--space-md);
+      color: var(--ink-mid);
       font-size: var(--text-body);
-      color: var(--ink-mid);
       line-height: 1.7;
-      margin-bottom: var(--space-sm);
     }
-    .featured-specs {
-      font-size: 13px;
+    .coming-soon .btn-primary {
+      margin-top: var(--space-xs);
+    }
+    .coming-soon-note {
+      margin-top: var(--space-lg);
+      font-size: 14px;
       color: var(--ink-light);
-      line-height: 1.8;
-      margin-bottom: var(--space-md);
-    }
-
-    /* ── Cause cards ── */
-    .cause-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .cause-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
-      transition: transform var(--duration-fast) var(--ease-out),
-                  box-shadow var(--duration-fast) var(--ease-out);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .cause-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    }
-    .cause-card-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: var(--surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .cause-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .cause-card-body {
-      padding: 24px;
-    }
-    .cause-card-name {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .cause-card-desc {
-      font-size: 14px;
-      color: var(--ink-mid);
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-    .cause-card-price {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    /* ── Merch grid ── */
-    .merch-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    .merch-card {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform var(--duration-fast) var(--ease-out);
-    }
-    .merch-card:hover {
-      transform: translateY(-4px);
-    }
-    .merch-card-img {
-      width: 100%;
-      aspect-ratio: 1;
-      background: var(--white);
-      border-radius: var(--radius);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    }
-    .merch-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .merch-card-name {
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .merch-card-price {
-      font-size: 14px;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* ── Placeholder icon for missing images ── */
-    .img-placeholder {
-      font-size: 36px;
-      color: var(--border);
-    }
-
-    @media (max-width: 768px) {
-      .featured { grid-template-columns: 1fr; gap: 24px; }
-      .cause-grid { grid-template-columns: 1fr; }
-      .merch-grid { grid-template-columns: repeat(2, 1fr); }
+      max-width: 400px;
     }
   </style>
 </head>
@@ -201,199 +79,17 @@
 
 <main>
 
-<!-- ── HERO ── -->
-<section class="section section--white" style="padding-top: calc(64px + var(--section-pad));">
-  <div class="container-narrow">
-    <div class="accent-bar"></div>
-    <p class="eyebrow">Shop for a Cause</p>
-    <h1 style="font-size: var(--text-section); font-weight: 700; margin-bottom: var(--space-md);">A tangible way to give hope.</h1>
-    <p class="lead">Help support our cause and improve health outcomes by giving to these critical areas. Every purchase and donation goes directly to programs in Mexico, the Philippines, and Uganda.</p>
-  </div>
-</section>
-
-<!-- ── FEATURED: INVEST IN HOPE ── -->
-<section class="section section--surface">
-  <div class="container">
-    <div class="featured">
-      <div class="featured-img">
-        <!-- Replace with: <img src="/shop/invest-in-hope.jpg" alt="Invest in Hope t-shirt"> -->
-        <span class="img-placeholder">&#9650;</span>
-      </div>
-      <div class="featured-body">
-        <p class="eyebrow">Featured</p>
-        <h3>Shop for a Cause: Give Hope</h3>
-        <div class="featured-price">$40</div>
-        <p>This t-shirt is everything you've dreamed of and more. It feels soft and lightweight, with the right amount of stretch. It's comfortable and flattering for all. Made on demand to reduce overproduction.</p>
-        <div class="featured-specs">
-          100% combed and ring-spun cotton &middot; Pre-shrunk &middot; Side-seamed &middot; Shoulder-to-shoulder taping
-        </div>
-        <a href="https://www.meetingtents.org/product-page/shop-for-a-cause-unisex-t-shirt" target="_blank" rel="noopener" class="btn-primary">
-          <span>Buy now</span>
-          <span class="btn-arrow">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── GIVE DIRECTLY ── -->
-<section class="section section--white">
-  <div class="container">
-    <div class="section-header">
-      <h2>Give directly</h2>
-      <p class="section-subtitle">Choose where your donation goes. Every dollar funds programs on the ground.</p>
-    </div>
-    <div class="cause-grid">
-
-      <a href="https://www.meetingtents.org/shopforacause" class="cause-card" target="_blank" rel="noopener">
-        <div class="cause-card-img">
-          <!-- Replace with: <img src="/shop/bed-nets.jpg" alt="Bed nets in Uganda"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="cause-card-body">
-          <div class="cause-card-name">Bed Nets for Uganda</div>
-          <div class="cause-card-desc">Malaria continues to be the leading cause of illness and death in Uganda. Make a global impact by purchasing bed nets and supplies to save lives.</div>
-          <div class="cause-card-price">Starting at $15</div>
-        </div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shopforacause" class="cause-card" target="_blank" rel="noopener">
-        <div class="cause-card-img">
-          <!-- Replace with: <img src="/shop/hiv-test-kits.jpg" alt="HIV testing in the Philippines"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="cause-card-body">
-          <div class="cause-card-name">HIV/AIDS Test Kits</div>
-          <div class="cause-card-desc">HIV/AIDS in the Philippines has increased by over 400% in the last 10 years! This is especially impacting vulnerable children and youth. Donate here to help improve access to care.</div>
-          <div class="cause-card-price">Starting at $25</div>
-        </div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shopforacause" class="cause-card" target="_blank" rel="noopener">
-        <div class="cause-card-img">
-          <!-- Replace with: <img src="/shop/internship.jpg" alt="Youth internship program"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="cause-card-body">
-          <div class="cause-card-name">Youth Internship Enrollment</div>
-          <div class="cause-card-desc">Our International Youth Internship Program trains students in health, education, leadership, and college preparation. The curriculum and monthly meetings are specifically designed for at-risk youth.</div>
-          <div class="cause-card-price">Starting at $50</div>
-        </div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shopforacause" class="cause-card" target="_blank" rel="noopener">
-        <div class="cause-card-img">
-          <!-- Replace with: <img src="/shop/hygiene-kits.jpg" alt="Hygiene kits for communities"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="cause-card-body">
-          <div class="cause-card-name">Hygiene Kits</div>
-          <div class="cause-card-desc">Proper hygiene and handwashing prevents common and life-threatening illnesses. Support our efforts to prevent disease by providing hygiene kits to youth in global communities.</div>
-          <div class="cause-card-price">Starting at $10</div>
-        </div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shopforacause" class="cause-card" target="_blank" rel="noopener">
-        <div class="cause-card-img">
-          <!-- Replace with: <img src="/shop/education-materials.jpg" alt="Health education materials"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="cause-card-body">
-          <div class="cause-card-name">Health Education Materials</div>
-          <div class="cause-card-desc">Help us provide resources and training materials for community leaders around the world as we train trainers! Basic items such as computers, printers, posters, and projectors are valuable tools for underresourced communities.</div>
-          <div class="cause-card-price">Starting at $50</div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── MERCH ── -->
-<section class="section section--surface">
-  <div class="container">
-    <div class="section-header">
-      <h2>Merch</h2>
-      <p class="section-subtitle">Wear the mission. Every purchase supports our programs.</p>
-    </div>
-    <div class="merch-grid">
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/tee-cream.jpg" alt="Short-Sleeve Unisex T-Shirt"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Short-Sleeve Unisex T-Shirt</div>
-        <div class="merch-card-price">$24</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/zip-hoodie.jpg" alt="Unisex Heavy Blend Zip Hoodie"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Unisex Zip Hoodie</div>
-        <div class="merch-card-price">$49</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/tee-gray.jpg" alt="Unisex T-Shirt"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Unisex T-Shirt</div>
-        <div class="merch-card-price">$24</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/hoodie-black.jpg" alt="Unisex Hoodie"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Unisex Hoodie</div>
-        <div class="merch-card-price">$49</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/trucker-cap.jpg" alt="Trucker Cap"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Trucker Cap</div>
-        <div class="merch-card-price">$26</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/youth-tee.jpg" alt="Youth T-Shirt"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Youth T-Shirt</div>
-        <div class="merch-card-price">$15</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/youth-hoodie.jpg" alt="Youth Heavy Blend Hoodie"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Youth Hoodie</div>
-        <div class="merch-card-price">$29</div>
-      </a>
-
-      <a href="https://www.meetingtents.org/shop" class="merch-card" target="_blank" rel="noopener">
-        <div class="merch-card-img">
-          <!-- Replace with: <img src="/shop/stickers.jpg" alt="Bubble-Free Stickers"> -->
-          <span class="img-placeholder">&#9650;</span>
-        </div>
-        <div class="merch-card-name">Stickers</div>
-        <div class="merch-card-price">$5</div>
-      </a>
-
-    </div>
-  </div>
+<section class="coming-soon">
+  <div class="coming-soon-icon">&#128722;</div>
+  <h1>Shop Coming Soon</h1>
+  <p class="lead">We're building something special. Soon you'll be able to shop for a cause — every purchase will directly fund disease prevention, health promotion, and access to care in Mexico, the Philippines, and Uganda.</p>
+  <a href="/meeting-tents/#contribute" class="btn-primary">
+    <span>Donate now</span>
+    <span class="btn-arrow">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+  <p class="coming-soon-note">In the meantime, you can support our mission directly through a donation. Every dollar goes to programs on the ground.</p>
 </section>
 
 <footer class="section section--dark footer">
